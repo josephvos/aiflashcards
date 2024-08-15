@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { db } from "/firebase.js";
 import { collection, getDocs, doc } from "firebase/firestore";
 import { useRouter } from "next/navigation";
-import { Container, Grid, Card, CardActionArea, CardContent, Typography } from "@mui/material";
+import { Container, Grid, Card, CardActionArea, CardContent, Typography, Divider } from "@mui/material";
 
 export default function Flashcards() {
     const { isSignedIn, isLoaded, user } = useUser();
@@ -62,23 +62,33 @@ export default function Flashcards() {
 
     return (
         <Container maxWidth="lg">
-            <Grid container spacing={3} sx={{ mt: 4 }}>
-                {flashcards.length > 0 ? (
-                    flashcards.map((flashcard) => (
-                        <Grid item xs={12} sm={6} md={4} key={flashcard.id}>
-                            <Card>
-                                <CardActionArea onClick={() => router.push(`/flashcard?id=${flashcard.id}`)}>
-                                    <CardContent>
-                                        <Typography variant="h6">{flashcard.name}</Typography>
-                                    </CardContent>
-                                </CardActionArea>
-                            </Card>
-                        </Grid>
-                    ))
-                ) : (
-                    <Typography>No flashcards found.</Typography>
-                )}
+        <Grid container spacing={3} sx={{ mt: 4 }} justifyContent="center">
+          <Grid item xs={12}>
+            <Typography variant="h4" gutterBottom sx={{ textAlign: 'center' }}>
+              Saved Flashcard Sets
+            </Typography>
+            <Divider sx={{ my: 4 }} />
+          </Grid>
+      
+          {flashcards.length > 0 ? (
+            flashcards.map((flashcard) => (
+              <Grid item xs={12} sm={6} md={4} key={flashcard.id}>
+                <Card>
+                  <CardActionArea onClick={() => router.push(`/flashcard?id=${flashcard.id}`)}>
+                    <CardContent>
+                      <Typography variant="h6">{flashcard.name}</Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Grid>
+            ))
+          ) : (
+            <Grid item xs={12}>
+              <Typography sx={{ textAlign: 'center' }}>No flashcards found.</Typography>
             </Grid>
-        </Container>
+          )}
+        </Grid>
+      </Container>
+      
     );
 }

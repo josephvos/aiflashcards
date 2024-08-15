@@ -28,44 +28,44 @@ Only generate 10 flashcards.
 Return in the following JSON format but replace the text with relevant information relating to the users input: 
 Raw Response: [
     {
-        "front": "What is the largest planet in our solar system?",
-        "back": "Jupiter"
+        "front": "",
+        "back": ""
     },
     {
-        "front": "Which planet is known for being the hottest?",
-        "back": "Venus"
+        "front": "",
+        "back": ""
     },
     {
-        "front": "What is the planet with the most moons?",
-        "back": "Jupiter (79 confirmed moons)"
+        "front": "",
+        "back": ""
     },
     {
-        "front": "Which planet is closest to the sun?",
-        "back": "Mercury"
+        "front": "",
+        "back": ""
     },
     {
-        "front": "What is the planet with the most Earth-like qualities?",
-        "back": "Earth (similar size, composition, and temperature)"
+        "front": "",
+        "back": ""
     },
     {
-        "front": "Which planet is no longer considered a planet?",
-        "back": "Pluto (reclassified as a dwarf planet)"
+        "front": "",
+        "back": ""
     },
     {
-        "front": "What is the planet with the thickest atmosphere?",
-        "back": "Venus (mainly carbon dioxide)"
+        "front": "",
+        "back": ""
     },
     {
-        "front": "Which planet is the farthest from the sun?",
-        "back": "Neptune"
+        "front": "",
+        "back": ""
     },
     {
-        "front": "What is the planet with the fastest rotation?",
-        "back": "Jupiter (period of 9 hours, 55 minutes, and 30 seconds)"
+        "front": "",
+        "back": ""
     },
     {
-        "front": "Which planet has the most prominent rings?",
-        "back": "Saturn (notable ring system)"
+        "front": "",
+        "back": ""
     }
 ]`;
 
